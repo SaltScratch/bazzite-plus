@@ -14,7 +14,7 @@ dnf5 install -y tmux
 
 # horizon client
 wget https://download3.omnissa.com/software/CART26FQ4_LIN64_RPMPKG_2512/Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
-dnf install Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
+dnf5 install -y Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
 rm Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
 
 # Use a COPR Example:
