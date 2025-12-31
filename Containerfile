@@ -39,8 +39,8 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     /tmp/build/build.sh
 
 # Copy system files explicitly
-COPY system_files /
-    
+#COPY system_files /
+
 ### LINTING
 ## Verify final image and contents are correct.
 RUN bootc container lint
