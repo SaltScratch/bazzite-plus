@@ -2,8 +2,8 @@
 #vlc
 
 # Developer Tools
-code
-stow
+#code
+#stow
 
 # Education
 
@@ -13,16 +13,16 @@ stow
 
 # Productivity
 #libreoffice
-nextcloud-client
-nextcloud-client-nautilus
-thunderbird
+#nextcloud-client
+#nextcloud-client-nautilus
+#thunderbird
 
 # Science
 
 # System
 
 # Utilities
-baobab
+#baobab
 
 # Gnome extensions
 gnome-shell-extension-forge
