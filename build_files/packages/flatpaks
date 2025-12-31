@@ -1,5 +1,5 @@
 # Audio + Video
-org.videolan.VLC
+#org.videolan.VLC
 
 # Developer Tools
 
@@ -14,16 +14,16 @@ io.github.Faugus.faugus-launcher
 org.mozilla.firefox 
 
 # Productivity
-org.mozilla.Thunderbird
-com.nextcloud.desktopclient.nextcloud
-org.libreoffice.LibreOffice
+#org.mozilla.Thunderbird
+#com.nextcloud.desktopclient.nextcloud
+#org.libreoffice.LibreOffice
 
 # Science
 
 # System
 
 # Utilities
-org.gnome.baobab 
+#org.gnome.baobab 
 io.github.flattool.Ignition
 com.github.tchx84.Flatseal
 com.mattjakeman.ExtensionManager 
