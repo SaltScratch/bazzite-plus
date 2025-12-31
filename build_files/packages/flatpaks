@@ -16,7 +16,7 @@ org.mozilla.firefox
 # Productivity
 #org.mozilla.Thunderbird
 #com.nextcloud.desktopclient.nextcloud
-#org.libreoffice.LibreOffice
+org.libreoffice.LibreOffice
 
 # Science
 
