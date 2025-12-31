@@ -10,8 +10,8 @@ set -ouex pipefail
 #rm Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
 
 # Run installation scripts
-#/tmp/build/scripts/install-rpms.sh
-#/tmp/build/scripts/install-flatpaks.sh
+/tmp/build/scripts/install-rpms.sh
+/tmp/build/scripts/install-flatpaks.sh
 
 # Use a COPR Example:
 #
