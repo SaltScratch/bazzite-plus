@@ -22,3 +22,5 @@ done
 [ -n "$FAILED_APPS" ] && echo "WARNING: Failed to install:$FAILED_APPS"
 
 echo "Flatpak installation complete!"
+
+rm -rf /var/tmp/flatpak-cache-*
