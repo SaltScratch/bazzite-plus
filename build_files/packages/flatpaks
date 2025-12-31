@@ -1,21 +1,31 @@
 # Audio + Video
 org.videolan.VLC
-com.spotify.Client
 
 # Developer Tools
+
+# Gaming
+io.github.Faugus.faugus-launcher
 
 # Education
 
 # Graphics + Photography
 
 # Networking
-com.discordapp.Discord
+org.mozilla.firefox 
 
 # Productivity
-md.obsidian.Obsidian
+org.mozilla.Thunderbird
+com.nextcloud.desktopclient.nextcloud
+org.libreoffice.LibreOffice
 
 # Science
 
 # System
 
 # Utilities
+org.gnome.baobab 
+io.github.flattool.Ignition
+com.github.tchx84.Flatseal
+com.mattjakeman.ExtensionManager 
+
+
