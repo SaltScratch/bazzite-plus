@@ -13,9 +13,9 @@ set -ouex pipefail
 dnf5 install -y tmux 
 
 # horizon client
-wget https://download3.omnissa.com/software/CART26FQ4_LIN64_RPMPKG_2512/Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
-dnf5 install -y Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
-rm Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
+#wget https://download3.omnissa.com/software/CART26FQ4_LIN64_RPMPKG_2512/Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
+#dnf5 install -y Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
+#rm Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
 
 # flatpaks
 flatpak install -y --system flathub org.mozilla.Thunderbird
@@ -28,6 +28,8 @@ flatpak install -y --system flathub com.github.tchx84.Flatseal
 flatpak install -y --system com.mattjakeman.ExtensionManager 
 flatpak install -y --system org.mozilla.firefox 
 flatpak install -y --system org.gnome.baobab 
+flatpak install -y --system org.videolan.VLC
+
 # remove other flatpaks
 flatpak remove -y org.gnome.Calendar
 flatpak remove -y org.gnome.Contacts   
