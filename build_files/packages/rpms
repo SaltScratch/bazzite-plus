@@ -1,5 +1,5 @@
 # Audio + Video
-vlc
+#vlc
 
 # Developer Tools
 code
@@ -12,7 +12,7 @@ stow
 # Networking
 
 # Productivity
-libreoffice
+#libreoffice
 nextcloud-client
 nextcloud-client-nautilus
 thunderbird
