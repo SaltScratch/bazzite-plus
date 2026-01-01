@@ -106,7 +106,6 @@ bazzite-plus-setup-git:
   read -p "Enter your Git email: " git_email
 
   # Configure Git
-  git config --global color.ui true
   git config --global user.name "$git_username"
   git config --global user.email "$git_email"
 
