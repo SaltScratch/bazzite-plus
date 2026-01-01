@@ -52,6 +52,11 @@ bazzite-plus-configure-desktop:
   gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
   gsettings set org.gnome.desktop.interface cursor-size 48
 
+  # configure gnome display settings
+  gdctl set \
+    --logical-monitor --primary --monitor DP-2 --scale 1.75 \
+    --logical-monitor --monitor HDMI-1 --right-of DP-2 --scale 1.75
+
 # Configure Extensions
 [group('Setup')]
 bazzite-plus-configure-extensions:
