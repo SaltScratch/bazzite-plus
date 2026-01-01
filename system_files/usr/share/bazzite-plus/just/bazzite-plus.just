@@ -4,7 +4,7 @@ default:
 
 # Post-install setup
 [group('Install')]
-bazzite-plus-post-install: bazzite-plus-configure-firefox bazzite-plus-download-horizon-client bazzite-plus-configure-desktop bazzite-plus-configure-extensions bazzite-plus-mount-drives && bazzite-plus-install-horizon-client
+bazzite-plus-post-install: bazzite-plus-copy-config-files bazzite-plus-configure-firefox bazzite-plus-download-horizon-client bazzite-plus-configure-desktop bazzite-plus-configure-extensions bazzite-plus-mount-drives && bazzite-plus-install-horizon-client
 
 # Configure Firefox
 [group('Setup')]
@@ -21,15 +21,6 @@ bazzite-plus-configure-firefox:
   echo "Configuring Firefox..."
   PROFPATH=$(grep 'Path=' $HOME/.var/app/org.mozilla.firefox/.mozilla/firefox/profiles.ini | sed s/^Path=// | grep release)
   cp /usr/share/bazzite-plus/firefox/user.js $HOME/.var/app/org.mozilla.firefox/.mozilla/firefox/$PROFPATH/
-
-# Copy config files
-[group('Setup')]
-bazzite-plus-copy-config-files:
-  #!/usr/bin/env bash
-  set -euo pipefail
-
-  echo "Copying config files..."
-  cp -r /usr/share/bazzite-plus/user-config/ $HOME/
 
 # Download Horizon Client
 [group('Install')]
