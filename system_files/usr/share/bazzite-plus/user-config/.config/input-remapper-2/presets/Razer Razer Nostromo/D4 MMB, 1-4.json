@@ -1,0 +1,233 @@
+[
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 15,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "z",
+        "name": "01",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 16,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Escape",
+        "name": "02",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 17,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Super_L",
+        "name": "03",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 18,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Tab",
+        "name": "04",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 19,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "t",
+        "name": "05",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 58,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "mouse",
+        "output_symbol": "BTN_MIDDLE",
+        "name": "06",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 30,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "1",
+        "name": "07",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 31,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "2",
+        "name": "08",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 32,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "3",
+        "name": "09",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 33,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "4",
+        "name": "10",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 42,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "q",
+        "name": "11",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 44,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "e",
+        "name": "12",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 45,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "a",
+        "name": "13",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 46,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "i",
+        "name": "14",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 56,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "KEY_TAB",
+        "name": "Thumb button",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 103,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "KEY_EQUAL",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 105,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "q",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 106,
+                "origin_hash": "151195a889bdb10047904eed9f5516fd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "e",
+        "mapping_type": "key_macro"
+    }
+]
