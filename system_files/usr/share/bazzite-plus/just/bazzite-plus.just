@@ -4,8 +4,17 @@ default:
 
 # Post-install setup
 [group('Install')]
-bazzite-plus-post-install: bazzite-plus-install-horizon-client bazzite-plus-configure-extensions bazzite-plus-mount-drives
-  echo "Post-install setup complete!"
+bazzite-plus-post-install: bazzite-plus-download-horizon-client bazzite-plus-configure-desktop bazzite-plus-configure-extensions bazzite-plus-mount-drives && bazzite-plus-install-horizon-client
+
+# Download Horizon Client
+[group('Install')]
+bazzite-plus-download-horizon-client:
+  #!/usr/bin/env bash
+  set -euo pipefail
+
+  echo "Downloading Horizon Client..."
+  wget -O /tmp/horizon-client.rpm https://download3.omnissa.com/software/CART26FQ4_LIN64_RPMPKG_2512/Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
+  echo "Horizon Client download complete."
 
 # Install Horizon Client
 [group('Install')]
@@ -14,10 +23,18 @@ bazzite-plus-install-horizon-client:
   set -euo pipefail
 
   echo "Installing Horizon Client..."
-  wget https://download3.omnissa.com/software/CART26FQ4_LIN64_RPMPKG_2512/Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
-  sudo rpm-ostree install Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
-  rm Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
+  sudo rpm-ostree install /tmp/horizon-client.rpm
   echo "Horizon Client installation complete. You will need to reboot to see it."
+
+# Configure Desktop
+[group('Setup')]
+bazzite-plus-configure-desktop:
+  #!/usr/bin/env bash
+  set -euo pipefail
+
+  echo "Configuring desktop..."
+  gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
+  gsettings set org.gnome.desktop.interface cursor-size 48
 
 # Configure Extensions
 [group('Setup')]
@@ -62,45 +79,5 @@ bazzite-plus-setup-git:
   git config --global color.ui true
   git config --global user.name "$git_username"
   git config --global user.email "$git_email"
-
-  if [ ! -f "${HOME}/.ssh/id_ed25519.pub" ]; then
-    # Generate SSH key
-    echo "SSH key not found"
-    echo "Generating SSH key..."
-    ssh-keygen -t ed25519 -C "$git_email"
-
-    # Display the public key
-    echo "Your SSH public key:"
-    cat ${HOME}/.ssh/id_ed25519.pub
-  else
-    echo "Using existing SSH key ~/.ssh/id_ed25519.pub"
-    # TODO: Improve this
-    echo "Manually verify that your email $git_email matches SSH key"
-  fi
-
-  echo "Setup GPG to use SSH key"
-  git config --global gpg.format ssh;
-  # Make SSH key inline, this allows us to use containers much easier with ssh
-  git config --global user.signingkey "key::$(cat ${HOME}/.ssh/id_ed25519.pub)";
-  git config --global commit.gpgSign true
-
-
-  echo "Setup aliases"
-  git config --global alias.add-nowhitespace '!git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero -';
-  git config --global alias.graph 'log --decorate --oneline --graph';
-  git config --global alias.ll 'log --oneline';
-  git config --global alias.prune-all '!git remote | xargs -n 1 git remote prune';
-  git config --global alias.pullr 'pull --rebase';
-  git config --global alias.pushall '!git remote | xargs -L1 git push --all';
-  git config --global alias.pushfwl 'push --force-with-lease';
-
-  echo "Various QoL configs"
-  # Improve git for big repos (makes older libgit2 not work correctly)
-  git config --global feature.manyFiles true;
-  git config --global init.defaultBranch main;
-
-  echo "Create global .gitignore"
-
-  git config --global core.excludesFile '~/.gitignore'
 
   echo "Git setup complete"
