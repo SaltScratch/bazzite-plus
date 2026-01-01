@@ -39,7 +39,7 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     /tmp/build/build.sh
 
 # Copy system files explicitly
-#COPY system_files /
+COPY system_files/usr/share /usr/share
 
 ### LINTING
 ## Verify final image and contents are correct.
