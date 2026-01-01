@@ -2,6 +2,11 @@
 default:
     @just --list
 
+# Post-install setup
+[group('Install')]
+bazzite-plus-post-install: bazzite-plus-install-horizon-client bazzite-plus-configure-extensions bazzite-plus-mount-drives
+  echo "Post-install setup complete!"
+
 # Install Horizon Client
 [group('Install')]
 bazzite-plus-install-horizon-client:
@@ -27,6 +32,19 @@ bazzite-plus-configure-extensions:
   dconf write /org/gnome/shell/extensions/dash-to-panel/panel-sizes \''{"PHL-0x00000648":56,"PHL-0x0000092a":56}'\'
   dconf write /org/gnome/shell/extensions/dash-to-panel/dot-position \''LEFT'\'
   dconf write /org/gnome/shell/extensions/dash-to-panel/panel-element-positions \''{"PHL-0x00000648":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}],"PHL-0x0000092a":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'\'
+
+# Mount drives
+[group('Setup')]
+bazzite-plus-mount-drives:
+  #!/usr/bin/env bash
+  set -euo pipefail
+
+  echo "Mounting drives..."
+
+  sudo mkdir /mnt/games
+  sudo su -c "echo '/dev/disk/by-label/games /mnt/games auto nosuid,nodev,nofail,x-gvfs-show 0 0' >> /etc/fstab"
+  sudo systemctl daemon-reload
+  sudo mount -a
 
 # Setup Git
 [group('Setup')]
